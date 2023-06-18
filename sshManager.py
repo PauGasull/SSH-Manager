@@ -92,7 +92,7 @@ def start_connection(connectionID: int):
         if os.path.isfile(os.path.join(FILES_PATH, element)):
             counter = counter + 1
             if counter == connectionID:
-                file_name = Path(path)
+                file_name = Path(element)
                 break
     with open(f"{FILES_PATH}/{file_name}") as f:
         exec(f.read())
